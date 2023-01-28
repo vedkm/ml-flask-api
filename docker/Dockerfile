@@ -8,8 +8,8 @@ RUN pip install --upgrade pip
 COPY requirements.txt .
 RUN pip install -r ./requirements.txt
 
-RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-RUN bash Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda
+# RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+# RUN bash Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda
 # RUN rm -f Miniconda3-latest-Linux-x86_64.sh
 
 # Copy code and model

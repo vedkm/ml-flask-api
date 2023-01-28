@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/Dockerfile
-    image: flask-ml
+    image: condaforge/mambaforge:22.9.0-1
     env_file:
       - ./docker/.env
     restart: always
