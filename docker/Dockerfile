@@ -4,13 +4,13 @@ WORKDIR /app
 
 RUN pip install --upgrade pip
 
-# Copy and install service requirements
-COPY requirements-service.txt .
-RUN pip install -r ./requirements-service.txt
-
 # Copy model requirements
 COPY requirements.txt .
 RUN pip install -r ./requirements.txt
+
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+RUN bash Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda
+# RUN rm -f Miniconda3-latest-Linux-x86_64.sh
 
 # Copy code and model
 COPY . .
